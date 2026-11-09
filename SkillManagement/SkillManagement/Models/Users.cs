@@ -20,7 +20,7 @@ namespace SkillManagement.Models
 
         public Boolean IsAdmin { get; set; }
 
-        public List<UserSkills> UserSkill { get; set; } = new List<UserSkills>();
+        public List<UserSkills> UserSkills { get; set; } = new List<UserSkills>();
 
     }
 }

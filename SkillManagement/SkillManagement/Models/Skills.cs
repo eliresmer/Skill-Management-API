@@ -17,6 +17,6 @@ namespace SkillManagement.Models
 
         public List<UserSkills> UserSkills { get; set; } = new List<UserSkills>();
         public List<Keywords> Keywords { get; set; } = new List<Keywords>();
-        public List<Descriptions> Descriptions { get; set; } = new List<Descriptions>   ();
+        public List<Descriptions> Descriptions { get; set; } = new List<Descriptions>();
     }
 }
