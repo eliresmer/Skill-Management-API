@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,7 @@ namespace SkillManagement.Controllers
     {
         public ActionResult Index()
         {
+		
             return View();
         }
 

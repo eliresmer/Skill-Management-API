@@ -10,7 +10,7 @@ namespace SkillManagement.Models
 {
     public class SkillManagementDBContext : DbContext
     {
-        public SkillManagementDBContext() : base("MyConnectionString"){
+        public SkillManagementDBContext() : base("groupC_db") {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<SkillManagementDBContext, SkillManagement.Migrations.Configuration>());
 
         }

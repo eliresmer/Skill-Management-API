@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace SkillManagement.Controllers
         // GET: Skills
         public ActionResult Index()
         {
-            return View();
+			SkillManagementDBContext db = new SkillManagementDBContext();
+			List<Skill> skills = db.Skills.ToList();
+			return View(skills);
         }
     }
 }

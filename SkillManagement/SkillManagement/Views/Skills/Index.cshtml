@@ -5,6 +5,7 @@
 		<tr>
 			<th>Skill</th>
 			<th>Description</th>
+			<th>User</th>
 			<th>Keywords</th>
 		</tr>
 	</thead>
@@ -13,9 +14,10 @@
 			<tr>
 				<td>@skill.SkillName</td>
 				<td>@skill.Description</td>
+				<td>@skill.User.UserName</td>
 				<td>
 					@foreach (var keyword in skill.Keywords) {
-						@keyword.Key
+						@keyword.Key.ToString()
 						<span>, </span>
 					}
 				</td>
