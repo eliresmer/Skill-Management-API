@@ -11,8 +11,6 @@ namespace SkillManagement.Models
         [Key, StringLength(100)]
         [Display(Name = "Keyword")]
         public string Key{ get; set; } = string.Empty;
-
-        public int SkillID { get; set; }
 	public List<Skill> Skills { get; set; } = new List<Skill>();  // many to many
 	}
 }
