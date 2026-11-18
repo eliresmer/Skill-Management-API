@@ -1,15 +1,17 @@
-﻿@model List<SkillManagement.Models.Skills>
+﻿@model List<SkillManagement.Models.Skill>
 
 <table class="table">
 	<thead>
 		<tr>
 			<th>Skill</th>
+			<th>Description</th>
 		</tr>
 	</thead>
 	<tbody>
 		@foreach (var skill in Model) {
 			<tr>
 				<td>@skill.SkillName</td>
+				<td>@skill.Description</td>
 			</tr>
 		}
 	</tbody>

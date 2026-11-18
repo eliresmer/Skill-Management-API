@@ -16,9 +16,8 @@ namespace SkillManagement.Models
         }
 
         public DbSet<Users> Users { get; set; }
-        public DbSet<Skills> Skills { get; set; }
-        public DbSet<Descriptions> Descriptions { get; set; }
-        public DbSet<Keywords> Keywords { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<Keyword> Keywords { get; set; }
         public DbSet<UserSkills> UserSkills { get; set; }
 
 
