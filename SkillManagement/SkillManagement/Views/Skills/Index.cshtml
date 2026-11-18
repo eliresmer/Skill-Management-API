@@ -5,6 +5,7 @@
 		<tr>
 			<th>Skill</th>
 			<th>Description</th>
+			<th>Keywords</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,6 +13,12 @@
 			<tr>
 				<td>@skill.SkillName</td>
 				<td>@skill.Description</td>
+				<td>
+					@foreach (var keyword in skill.Keywords) {
+						@keyword.Key
+						<span>, </span>
+					}
+				</td>
 			</tr>
 		}
 	</tbody>

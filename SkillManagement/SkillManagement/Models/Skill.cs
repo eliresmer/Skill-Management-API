@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.Web.Razor.Tokenizer.Symbols;
@@ -10,8 +11,8 @@ namespace SkillManagement.Models
     public class Skill
     {
         [Key]
-        [Required]
-        public int SkillId { get; set; }
+	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+	public int SkillId { get; set; }
         [Required]
         public string SkillName { get; set; }
         public ICollection<Keyword> Keywords { get; set; } = new List<Keyword>(); //one skill has many keywords (parent)

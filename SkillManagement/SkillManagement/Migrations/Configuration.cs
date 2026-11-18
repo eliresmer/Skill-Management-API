@@ -9,8 +9,9 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-        }
+		AutomaticMigrationsEnabled = true;
+		AutomaticMigrationDataLossAllowed = true;
+	}
 
         protected override void Seed(SkillManagement.Models.SkillManagementDBContext context)
         {
