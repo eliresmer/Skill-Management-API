@@ -7,16 +7,14 @@ using System.Web.Razor.Tokenizer.Symbols;
 
 namespace SkillManagement.Models
 {
-    public class Skills
+    public class Skill
     {
         [Key]
         [Required]
         public int SkillId { get; set; }
         [Required]
         public string SkillName { get; set; }
-
-        public List<UserSkills> UserSkills { get; set; } = new List<UserSkills>();
-        public List<Keywords> Keywords { get; set; } = new List<Keywords>();
-        public List<Descriptions> Descriptions { get; set; } = new List<Descriptions>();
+        public ICollection<Keyword> Keywords { get; set; } = new List<Keyword>(); //one skill has many keywords (parent)
+	public string Description { get; set; }
     }
 }

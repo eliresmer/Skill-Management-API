@@ -6,14 +6,13 @@ using System.Web;
 
 namespace SkillManagement.Models
 {
-    public class Keywords
+    public class Keyword
     {
         [Key, StringLength(100)]
         [Display(Name = "Keyword")]
-        public string KeywordText { get; set; } = string.Empty;
+        public string Key{ get; set; } = string.Empty;
 
-        
         public int SkillID { get; set; }
-        public Skills Skill { get; set; } = null;
+        public Skill Skill { get; set; } = null; //one skill has many keywords
     }
 }

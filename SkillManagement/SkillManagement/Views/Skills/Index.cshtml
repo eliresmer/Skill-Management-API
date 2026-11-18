@@ -1,0 +1,18 @@
+﻿@model List<SkillManagement.Models.Skills>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Skill</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var skill in Model) {
+			<tr>
+				<td>@skill.SkillName</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a href="@Url.Action("Create", "Skills")">Add a Skill</a>
