@@ -15,6 +15,7 @@ namespace SkillManagement.Models
         [Required]
         public string SkillName { get; set; }
         public ICollection<Keyword> Keywords { get; set; } = new List<Keyword>(); //one skill has many keywords (parent)
-	public string Description { get; set; }
+	public string Description { get; set; } //one skill = one description
+	public User User { get; set; } // one skill = one user
     }
 }

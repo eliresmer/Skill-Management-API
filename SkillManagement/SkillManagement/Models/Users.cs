@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 
 namespace SkillManagement.Models
 {
-    public class Users
+    public class User
     {
         [Key]
         [Required]
@@ -20,7 +21,7 @@ namespace SkillManagement.Models
 
         public Boolean IsAdmin { get; set; }
 
-        public List<UserSkills> UserSkills { get; set; } = new List<UserSkills>();
+	public ICollection<Skill> Skills { get; set; } = new List<Skill>(); //one user has many skills
 
     }
 }
