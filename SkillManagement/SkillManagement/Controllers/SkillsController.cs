@@ -5,16 +5,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SkillManagement.Controllers
-{
-    public class SkillsController : Controller
-    {
-        // GET: Skills
-        public ActionResult Index()
-        {
-			SkillManagementDBContext db = new SkillManagementDBContext();
-			List<Skill> skills = db.Skills.ToList();
+namespace SkillManagement.Controllers {
+	public class SkillsController : Controller {
+		private readonly SkillManagementDBContext db = new SkillManagementDBContext();
+		// GET: Skills
+		public ActionResult Index() {
+			List  <Skill> skills= db.Skills.ToList();
 			return View(skills);
-        }
-    }
+		}
+	}
 }
