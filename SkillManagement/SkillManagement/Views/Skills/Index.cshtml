@@ -14,7 +14,7 @@
 			<tr>
 				<td>@skill.SkillName</td>
 				<td>@skill.Description</td>
-				<td>@skill.User</td>
+				<td>@(skill.User != null ? skill.User.UserName: "")</td>
 				<td>
 					@foreach (var keyword in skill.Keywords) {
 						@keyword.Key.ToString()

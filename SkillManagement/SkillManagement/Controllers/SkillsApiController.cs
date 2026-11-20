@@ -16,7 +16,18 @@ namespace SkillManagement.Controllers
 
         public IHttpActionResult GetSkills()
         {
-            var skills = db.Skills.Select(s => new { s.SkillId, s.SkillName }).ToList();
+            //var skills = db.Skills.Select(s => new { s.SkillId, s.SkillName }).ToList();
+
+            var skills = db.Skills.Select(s => new
+            {
+                s.SkillId,
+                s.SkillName,
+                s.Description,
+                UserName = s.User.UserName,
+                Keywords = s.Keywords.Select(k => k.Key)
+            }).ToList();
+
+
             return Ok(skills);
 
         }
@@ -25,7 +36,13 @@ namespace SkillManagement.Controllers
         {
             var skill = db.Skills
                 .Where(s => s.SkillId == id )
-                .Select(s => new { s.SkillId, s.SkillName })
+                .Select(s => new { 
+                    s.SkillId, 
+                    s.SkillName,
+                    s.Description,
+                    UserName = s.User.UserName,
+                    Keywords = s.Keywords.Select(k => k.Key)
+                })
                 .FirstOrDefault();
 
             if (skill == null)
