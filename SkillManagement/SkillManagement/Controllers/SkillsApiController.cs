@@ -1,12 +1,14 @@
 ﻿using SkillManagement.Models;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SkillManagement.Controllers
 {
     public class SkillsApiController : ApiController
     {
 	private readonly SkillManagementDBContext db = new SkillManagementDBContext();
+	[EnableCors(origins: "http://localhost", headers: "*", methods: "*")]
 
 	public IHttpActionResult GetSkills()
 	{
