@@ -14,12 +14,15 @@
 			<tr>
 				<td>@skill.SkillName</td>
 				<td>@skill.Description</td>
-				<td>@skill.User</td>
+				<td>@(skill.User != null ? skill.User.UserName: "")</td>
 				<td>
-					@foreach (var keyword in skill.Keywords) {
-						@keyword.Key.ToString()
-						<span>, </span>
+					@{
+						List<string> keywords = new List<string>();
+						foreach (var keyword in skill.Keywords) {
+							keywords.Add(keyword.Key.ToString());
+						}
 					}
+					@String.Join(", ", keywords)
 				</td>
 			</tr>
 		}
