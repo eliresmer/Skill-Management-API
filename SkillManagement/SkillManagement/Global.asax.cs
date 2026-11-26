@@ -18,6 +18,7 @@ namespace SkillManagement
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             GlobalConfiguration.Configure(WebApiConfig.Register);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-        }
+	    
+	}
     }
 }
